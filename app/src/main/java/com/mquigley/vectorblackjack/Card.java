@@ -17,4 +17,29 @@ public class Card
         name = n;
         value = v;
     }
+
+    public String toString()
+    {
+        String suitString;
+
+        switch(suit)
+        {
+            case SPADES:
+                suitString = "♠";
+                break;
+            case CLUBS:
+                suitString = "♣";
+                break;
+            case HEARTS:
+                suitString = "♥";
+                break;
+            case DIAMONDS:
+                suitString = "♦";
+                break;
+            default:
+                suitString = "☺";
+        }
+
+        return String.format("%1%2", suitString, name);
+    }
 }
